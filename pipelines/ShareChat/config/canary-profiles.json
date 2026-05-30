@@ -1,0 +1,27 @@
+{
+  "_comment": "Canary profiles for extraction health monitoring. Expected ranges should be updated if a creator's real stats change significantly.",
+  "canaries": [
+    {
+      "handle": "beard_boyy",
+      "platform": "sharechat",
+      "expected": {
+        "followerCount": { "min": 40000, "max": 100000 },
+        "postCount": { "min": 4000, "max": 15000 }
+      }
+    },
+    {
+      "handle": "thanseel161",
+      "platform": "sharechat",
+      "expected": {
+        "followerCount": { "min": 80000, "max": 200000 }
+      }
+    },
+    {
+      "handle": "sharif_boy_om",
+      "platform": "sharechat",
+      "expected": {
+        "followerCount": { "min": 15000, "max": 60000 }
+      }
+    }
+  ]
+}

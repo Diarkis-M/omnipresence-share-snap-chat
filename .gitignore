@@ -1,0 +1,9 @@
+node_modules/
+pipelines/ShareChat/node_modules/
+pipelines/Snapchat/node_modules/
+pipelines/ShareChat/data/
+pipelines/Snapchat/data/
+pipelines/ShareChat/output/
+pipelines/Snapchat/output/
+.env
+.vercel/

@@ -1,0 +1,26 @@
+{
+  "cities": [
+    "mumbai", "delhi", "bangalore", "bengaluru", "hyderabad", "chennai", "kolkata",
+    "pune", "jaipur", "lucknow", "ahmedabad", "surat", "indore", "bhopal",
+    "chandigarh", "noida", "gurgaon", "gurugram", "kochi", "coimbatore",
+    "nagpur", "patna", "ranchi", "dehradun", "goa", "thiruvananthapuram",
+    "mysore", "mysuru", "vadodara", "varanasi", "agra", "nashik", "ludhiana",
+    "amritsar", "visakhapatnam", "vizag", "bhubaneswar", "guwahati", "raipur",
+    "jodhpur", "udaipur", "mangalore", "thane", "faridabad", "kanpur", "meerut",
+    "rajkot", "jammu", "srinagar", "trivandrum", "thrissur", "madurai",
+    "vijayawada", "guntur", "hubli", "belgaum", "aurangabad", "nanded",
+    "jalandhar", "bathinda", "shimla", "gangtok", "shillong", "imphal"
+  ],
+  "regions": [
+    "india", "bharat", "maharashtra", "karnataka", "tamil nadu", "telangana",
+    "kerala", "andhra pradesh", "gujarat", "rajasthan", "uttar pradesh",
+    "madhya pradesh", "west bengal", "punjab", "haryana", "bihar",
+    "odisha", "jharkhand", "uttarakhand", "assam", "chhattisgarh",
+    "himachal pradesh"
+  ],
+  "keywords": [
+    "bhai", "yaar", "dost", "desi", "swadeshi", "ayurveda", "ayurvedic",
+    "gharelu", "nuskha", "upay", "tarika", "kaise", "kare", "hindi",
+    "hindustani", "bharatiya", "indianblogger", "indiancreator"
+  ]
+}

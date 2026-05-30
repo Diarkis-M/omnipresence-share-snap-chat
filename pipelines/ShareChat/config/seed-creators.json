@@ -1,0 +1,17 @@
+{
+  "_comment": "Manual seed list for ShareChat grooming creators. Confirmed via profile page checks.",
+  "seed_creators": [
+    { "handle": "beard_boyy", "platform": "sharechat", "language": "hindi", "note": "57.3K followers, 6.8K posts — strong grooming creator" },
+    { "handle": "thanseel161", "platform": "sharechat", "language": "hindi", "note": "1.1 lakh followers — high reach" },
+    { "handle": "shafeekmohammed", "platform": "sharechat", "language": "hindi", "note": "1.3 lakh followers — high reach" },
+    { "handle": "sharif_boy_om", "platform": "sharechat", "language": "hindi", "note": "26.5K followers — mid-tier creator" },
+    { "handle": "1kaushalsharma", "platform": "sharechat", "language": "hindi", "note": "Confirmed ShareChat profile — grooming/style" },
+    { "handle": "strictlyformen", "platform": "sharechat", "language": "hindi", "note": "994 followers — nano grooming niche" },
+    { "handle": "mens_fashion_tamil_fan_page", "platform": "sharechat", "language": "tamil", "note": "262 followers — Tamil men's fashion" },
+    { "handle": "jaykerboy", "platform": "sharechat", "language": "hindi", "note": "Confirmed grooming creator" },
+    { "handle": "gauravpreet_singh", "platform": "sharechat", "language": "hindi", "note": "Confirmed ShareChat creator" },
+    { "handle": "fashionhub", "platform": "sharechat", "language": "hindi", "note": "1,056 followers — fashion/style" },
+    { "handle": "beardlover", "platform": "sharechat", "language": "hindi", "note": "Small grooming creator — batch-discovered" },
+    { "handle": "beardking", "platform": "sharechat", "language": "hindi", "note": "Small grooming creator — batch-discovered" }
+  ]
+}

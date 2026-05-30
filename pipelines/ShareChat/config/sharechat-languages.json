@@ -1,0 +1,18 @@
+{
+  "_comment": "Language targeting for GCPL men's grooming on ShareChat. Ordered by priority for Tier 3/4 rural India penetration.",
+  "primary_languages": [
+    { "code": "hi", "name": "Hindi", "priority": 1, "rationale": "Largest user base, Hindi belt = UP/MP/Bihar/Rajasthan/CG" },
+    { "code": "te", "name": "Telugu", "priority": 2, "rationale": "AP + Telangana, strong Tier 3/4 presence" },
+    { "code": "ta", "name": "Tamil", "priority": 3, "rationale": "TN Tier 3/4 towns, high ShareChat adoption" },
+    { "code": "kn", "name": "Kannada", "priority": 4, "rationale": "Karnataka rural, Hubli-Dharwad-Belgaum belt" },
+    { "code": "bn", "name": "Bengali", "priority": 5, "rationale": "WB + Assam spillover, strong rural usage" },
+    { "code": "mr", "name": "Marathi", "priority": 6, "rationale": "Maharashtra Tier 3: Nashik, Aurangabad, Nanded" }
+  ],
+  "secondary_languages": [
+    { "code": "gu", "name": "Gujarati" },
+    { "code": "ml", "name": "Malayalam" },
+    { "code": "pa", "name": "Punjabi" },
+    { "code": "or", "name": "Odia" },
+    { "code": "as", "name": "Assamese" }
+  ]
+}

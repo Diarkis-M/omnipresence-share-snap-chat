@@ -1,0 +1,21 @@
+{
+  "name": "snapchat-scouting-pipeline",
+  "version": "2.0.0",
+  "description": "Standalone Snapchat influencer scouting for GCPL men's grooming — API-first, zero external dependencies",
+  "type": "module",
+  "scripts": {
+    "discover:api": "node scripts/discover-api.js",
+    "discover:google": "node scripts/discover-google.js",
+    "validate": "node scripts/validate-handles.js",
+    "enrich": "node scripts/enrich-profiles.js",
+    "pipeline": "node scripts/run-pipeline.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^17.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

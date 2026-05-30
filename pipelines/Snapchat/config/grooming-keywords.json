@@ -1,0 +1,37 @@
+{
+  "categories": {
+    "Beard Oil & Beard Care": [
+      "beard", "beardcare", "beardoil", "beardgang", "beardlife", "beardstyle",
+      "beardgrooming", "beardgrowth", "beardedmen", "dadhi", "indianbeard"
+    ],
+    "Face Wash & Face Care": [
+      "mensskincare", "skincareformen", "indianskincare", "facewash",
+      "mensgrooming", "skincareroutine", "acne", "glowingskin"
+    ],
+    "Hair Styling & Hair Care": [
+      "menshair", "hairstyle", "haircare", "barbershop", "fade",
+      "menshairstyle", "haircut", "pomade", "hairstyling"
+    ],
+    "Men's Grooming (General)": [
+      "mensgrooming", "malegrooming", "grooming", "groomingessentials",
+      "groomingproducts", "menstyle", "mensfashion"
+    ],
+    "Skincare & Serums": [
+      "serum", "sunscreen", "moisturizer", "retinol", "niacinamide",
+      "skincareproducts", "antiaging", "mensskin"
+    ],
+    "Deodorants & Perfumes": [
+      "perfume", "fragrance", "cologne", "deodorant", "attar",
+      "mensperfume", "fragrancereview", "scentoftheday"
+    ],
+    "Home Care & Air Fresheners": [
+      "airfreshener", "homecare", "homefragrance", "roomfreshener",
+      "aroma", "homeessentials"
+    ]
+  },
+  "generic_relevance_terms": [
+    "grooming", "skincare", "beard", "hair", "perfume", "fragrance",
+    "deodorant", "men", "mens", "male", "guy", "review", "product",
+    "routine", "tutorial", "tips", "howto"
+  ]
+}

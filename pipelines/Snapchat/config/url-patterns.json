@@ -1,0 +1,10 @@
+{
+  "_comment": "Externalized URL patterns for Snapchat handle extraction. Edit here if Snapchat changes their URL structure.",
+  "patterns": {
+    "snapchat": {
+      "profileUrl": "https://www.snapchat.com/add/{handle}",
+      "handleRegex": "snapchat\\.com\\/add\\/([a-zA-Z0-9._-]{3,30})",
+      "regexFlags": "i"
+    }
+  }
+}

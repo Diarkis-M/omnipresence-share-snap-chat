@@ -1,0 +1,26 @@
+{
+  "_comment": "Canary profiles for health monitoring. Known-good Snapchat creators with expected metric ranges. If extraction returns values outside these ranges, the extraction pipeline may be broken.",
+  "canaries": [
+    {
+      "handle": "fashioninmumbai",
+      "platform": "snapchat",
+      "expected": {
+        "subscriberCount": { "min": 30000, "max": 150000 }
+      }
+    },
+    {
+      "handle": "rohit_rao66",
+      "platform": "snapchat",
+      "expected": {
+        "subscriberCount": { "min": 5000, "max": 30000 }
+      }
+    },
+    {
+      "handle": "amarp_8514",
+      "platform": "snapchat",
+      "expected": {
+        "subscriberCount": { "min": 3000, "max": 20000 }
+      }
+    }
+  ]
+}

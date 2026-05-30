@@ -1,0 +1,11 @@
+{
+  "_comment": "URL patterns for handle extraction. Edit these if platform URL formats change — no code change needed.",
+  "sharechat": {
+    "profileUrl": "sharechat\\.com/profile/([a-zA-Z0-9._-]{3,50})",
+    "profileUrlTemplate": "https://sharechat.com/profile/{handle}"
+  },
+  "moj": {
+    "profileUrl": "mojapp\\.in/@([a-zA-Z0-9._-]{3,50})",
+    "profileUrlTemplate": "https://mojapp.in/@{handle}"
+  }
+}

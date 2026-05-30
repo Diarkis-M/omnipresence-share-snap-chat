@@ -1,0 +1,106 @@
+{
+  "_comment": "Google CSE search queries with lifecycle metadata. Status: proven (hand-tuned, always run), experimental (LLM-generated, auto-pruned after 3 consecutive zeros), stale (flagged, not run). Queries are pruned/archived automatically by the pipeline.",
+  "queries": [
+    {
+      "q": "site:snapchat.com/add beard grooming India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "site:snapchat.com/add mens grooming India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "site:snapchat.com/add skincare men India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "site:snapchat.com/add hairstyle barber India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "site:snapchat.com/add perfume fragrance India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "\"snapchat\" \"men's grooming\" India influencer",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "\"snapchat\" \"beard care\" India creator",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "\"add me on snapchat\" grooming India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "\"snapchat\" \"skincare routine\" men India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    },
+    {
+      "q": "\"snapchat\" \"hair tutorial\" men India",
+      "source": "manual",
+      "status": "proven",
+      "addedAt": "2026-05-24",
+      "timesRun": 0,
+      "totalHandlesFound": 0,
+      "lastYieldedAt": null,
+      "consecutiveZeros": 0
+    }
+  ],
+  "_archive": []
+}

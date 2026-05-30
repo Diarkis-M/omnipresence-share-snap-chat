@@ -1,0 +1,21 @@
+{
+  "name": "sharechat-scouting-pipeline",
+  "version": "1.0.0",
+  "description": "Standalone ShareChat/Moj influencer scouting for GCPL men's grooming — Tier 3/4 rural India focus",
+  "type": "module",
+  "scripts": {
+    "discover:google": "node scripts/discover-google.js",
+    "discover:tags": "node scripts/discover-tags.js",
+    "validate": "node scripts/validate-profiles.js",
+    "enrich": "node scripts/enrich-profiles.js",
+    "pipeline": "node scripts/run-pipeline.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "dotenv": "^17.4.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

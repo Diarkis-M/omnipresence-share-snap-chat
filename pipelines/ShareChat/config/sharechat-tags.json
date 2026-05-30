@@ -1,0 +1,13 @@
+{
+  "_comment": "Tag hashes for grooming-related content on ShareChat. Discovered from sharechat.com/tag/ URLs via Google search.",
+  "grooming_tags": [
+    { "hash": "pwmBJ3", "name": "beard", "url": "https://sharechat.com/tag/pwmBJ3" },
+    { "hash": "mkjaV", "name": "beard style", "url": "https://sharechat.com/tag/mkjaV" },
+    { "hash": "pkjZ1g", "name": "men hairstyle", "url": "https://sharechat.com/tag/pkjZ1g" },
+    { "hash": "ZgaDkM", "name": "hair cutting", "url": "https://sharechat.com/tag/ZgaDkM" },
+    { "hash": "0RV6GD", "name": "Hairstyle", "url": "https://sharechat.com/tag/0RV6GD" }
+  ],
+  "lifestyle_tags": [
+    { "hash": "q1Eyal", "name": "Explore Trends", "url": "https://sharechat.com/tag/q1Eyal" }
+  ]
+}

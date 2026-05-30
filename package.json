@@ -1,0 +1,16 @@
+{
+  "name": "omnipresence-scout",
+  "version": "2.1.0",
+  "description": "Omnipresence — influencer scouting for ShareChat + Snapchat",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "cd pipelines/ShareChat && npm install --omit=dev && cd ../Snapchat && npm install --omit=dev"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
