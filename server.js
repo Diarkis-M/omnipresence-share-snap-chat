@@ -47,47 +47,122 @@ app.get('/api/results', (req, res) => {
   });
 });
 
-// ─── Run pipelines ───
+// ─── Async scouting with status polling ───
 
-let scouting = false;
+let scoutState = {
+  running: false,
+  startedAt: null,
+  completedAt: null,
+  results: null,  // { sharechat: {...}, snapchat: {...}, runs: [...] }
+  error: null,
+  logs: [],       // recent log lines for progress
+};
+
+function logScout(msg) {
+  const ts = new Date().toISOString().split('T')[1].split('.')[0];
+  const line = `[${ts}] ${msg}`;
+  console.log(line);
+  scoutState.logs.push(line);
+  if (scoutState.logs.length > 50) scoutState.logs.shift();
+}
 
 function runPipeline(platform) {
   const dir = platform === 'sharechat' ? SHARECHAT_DIR : SNAPCHAT_DIR;
   const skipFlags = platform === 'snapchat' ? '--skip-api --skip-google' : '--skip-google';
   const cmd = `node scripts/run-pipeline.js --fresh ${skipFlags}`;
 
+  logScout(`[${platform}] Starting: ${cmd}`);
+  logScout(`[${platform}] CWD: ${dir}`);
+
   return new Promise((resolve) => {
     exec(cmd, { cwd: dir, timeout: 600000, env: { ...process.env } }, (err, stdout, stderr) => {
       if (err) {
-        resolve({ success: false, platform, error: err.message, stdout, stderr });
+        logScout(`[${platform}] FAILED: ${err.message}`);
+        if (stderr) logScout(`[${platform}] STDERR: ${stderr.slice(0, 500)}`);
+        resolve({ success: false, platform, error: err.message });
       } else {
-        resolve({ success: true, platform, stdout });
+        // Log the last 5 lines of stdout for evidence
+        const lastLines = stdout.trim().split('\n').slice(-5).join(' | ');
+        logScout(`[${platform}] SUCCESS: ${lastLines}`);
+        resolve({ success: true, platform });
       }
     });
   });
 }
 
-app.post('/api/scout', async (req, res) => {
-  if (scouting) {
-    return res.status(429).json({ error: 'A scouting run is already in progress. Wait for it to finish.' });
+// POST /api/scout → starts pipelines in background, returns immediately
+app.post('/api/scout', (req, res) => {
+  if (scoutState.running) {
+    return res.json({ status: 'running', startedAt: scoutState.startedAt, logs: scoutState.logs });
   }
 
-  scouting = true;
-  const platforms = req.body.platforms || ['sharechat', 'snapchat'];
+  // Reset state and start
+  scoutState = {
+    running: true,
+    startedAt: new Date().toISOString(),
+    completedAt: null,
+    results: null,
+    error: null,
+    logs: [],
+  };
 
-  try {
-    const results = await Promise.all(platforms.map(p => runPipeline(p)));
-    const data = {
-      sharechat: readResults('sharechat'),
-      snapchat: readResults('snapchat'),
-      runs: results.map(r => ({ platform: r.platform, success: r.success, error: r.error })),
-    };
-    res.json(data);
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  } finally {
-    scouting = false;
+  logScout('Scouting started');
+
+  const platforms = (req.body.platforms || ['sharechat', 'snapchat']);
+
+  // Fire and forget — don't await
+  Promise.all(platforms.map(p => runPipeline(p)))
+    .then(runs => {
+      const data = {
+        sharechat: readResults('sharechat'),
+        snapchat: readResults('snapchat'),
+        runs: runs.map(r => ({ platform: r.platform, success: r.success, error: r.error })),
+      };
+      scoutState.results = data;
+      scoutState.completedAt = new Date().toISOString();
+      logScout(`Scouting complete. ShareChat: ${data.sharechat.report?.candidates?.length || 0} creators, Snapchat: ${data.snapchat.report?.candidates?.length || 0} creators`);
+    })
+    .catch(err => {
+      scoutState.error = err.message;
+      logScout(`Scouting FAILED: ${err.message}`);
+    })
+    .finally(() => {
+      scoutState.running = false;
+    });
+
+  // Return immediately
+  res.json({ status: 'started', startedAt: scoutState.startedAt });
+});
+
+// GET /api/scout/status → poll for progress
+app.get('/api/scout/status', (req, res) => {
+  if (scoutState.running) {
+    return res.json({
+      status: 'running',
+      startedAt: scoutState.startedAt,
+      logs: scoutState.logs,
+    });
   }
+
+  if (scoutState.results) {
+    return res.json({
+      status: 'complete',
+      startedAt: scoutState.startedAt,
+      completedAt: scoutState.completedAt,
+      data: scoutState.results,
+      logs: scoutState.logs,
+    });
+  }
+
+  if (scoutState.error) {
+    return res.json({
+      status: 'error',
+      error: scoutState.error,
+      logs: scoutState.logs,
+    });
+  }
+
+  res.json({ status: 'idle' });
 });
 
 // ─── Start ───

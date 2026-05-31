@@ -438,50 +438,106 @@ function renderAll(data) {
   renderSnapchat(data.snapchat?.report);
 }
 
-let isLocal = false;
+let hasServer = false;
 
 async function loadExisting() {
+  // Try live server API first
   try {
     const controller = new AbortController();
-    setTimeout(() => controller.abort(), 2000);
+    setTimeout(() => controller.abort(), 3000);
     const res = await fetch('/api/results', { signal: controller.signal });
     if (res.ok) {
       const data = await res.json();
-      isLocal = true;
-      renderAll(data);
-      setStatus('Showing results from last run. Hit Scout to refresh.', '');
-      return;
+      hasServer = true;
+      // Only render if there's actual data (not null reports)
+      const hasSC = data.sharechat?.report?.candidates?.length > 0;
+      const hasSN = data.snapchat?.report?.candidates?.length > 0;
+      if (hasSC || hasSN) {
+        renderAll(data);
+        setStatus('Showing results from last run. Hit Scout to refresh.', '');
+        return;
+      }
+      // Server exists but no results yet — fall through to static
     }
   } catch { }
 
+  // Fallback: static JSON files
   try {
     const [scRes, snRes] = await Promise.all([
       fetch('/data-sharechat.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('/data-snapchat.json').then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     const data = { sharechat: { report: scRes }, snapchat: { report: snRes } };
-    if (scRes || snRes) { renderAll(data); setStatus('Showing latest scouting data.', ''); }
+    if (scRes || snRes) {
+      renderAll(data);
+      setStatus(hasServer ? 'Showing cached data. Hit Scout for fresh results.' : 'Showing latest scouting data.', '');
+    }
   } catch { }
+}
+
+let pollTimer = null;
+
+async function pollScoutStatus() {
+  try {
+    const res = await fetch('/api/scout/status');
+    const status = await res.json();
+
+    if (status.status === 'running') {
+      const elapsed = Math.round((Date.now() - new Date(status.startedAt).getTime()) / 1000);
+      const lastLog = status.logs?.length > 0 ? status.logs[status.logs.length - 1] : '';
+      setStatus(`Scouting in progress... ${elapsed}s elapsed. ${lastLog}`, '');
+      pollTimer = setTimeout(pollScoutStatus, 4000);
+      return;
+    }
+
+    // Done — stop polling
+    const btn = document.getElementById('scoutBtn');
+    btn.disabled = false;
+    btn.innerHTML = '<span class="material-symbols-outlined">search</span> Scout Creators';
+
+    if (status.status === 'complete' && status.data) {
+      renderAll(status.data);
+      const sc = status.data.sharechat?.report?.candidates?.length || 0;
+      const sn = status.data.snapchat?.report?.candidates?.length || 0;
+      setStatus(`Scouting complete. ${sc} ShareChat + ${sn} Snapchat creators found.`, 'success');
+    } else if (status.status === 'error') {
+      setStatus('Scouting failed: ' + (status.error || 'Unknown error'), 'error');
+    } else {
+      setStatus('Ready to scout.', '');
+    }
+  } catch (err) {
+    // Network error during poll — retry
+    pollTimer = setTimeout(pollScoutStatus, 5000);
+  }
 }
 
 async function runScout() {
   const btn = document.getElementById('scoutBtn');
   btn.disabled = true;
   btn.innerHTML = '<span class="spinner"></span> Scouting...';
-  setStatus('Running ShareChat + Snapchat pipelines... this takes 2-4 minutes.', '');
+  setStatus('Starting scouting pipelines...', '');
+
   try {
-    const res = await fetch('/api/scout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ platforms: ['sharechat', 'snapchat'] }) });
-    const data = await res.json();
-    if (data.error) { setStatus('Error: ' + data.error, 'error'); }
-    else {
-      const fails = (data.runs || []).filter(r => !r.success);
-      if (fails.length > 0) setStatus('Done with warnings: ' + fails.map(f => f.platform + ': ' + f.error).join('; '), 'error');
-      else setStatus('Scouting complete.', 'success');
-      renderAll(data);
+    const res = await fetch('/api/scout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ platforms: ['sharechat', 'snapchat'] }),
+    });
+    const result = await res.json();
+
+    if (result.status === 'started' || result.status === 'running') {
+      setStatus('Pipelines running... scraping profiles (this takes 2-4 minutes).', '');
+      pollTimer = setTimeout(pollScoutStatus, 4000);
+    } else if (result.error) {
+      setStatus('Error: ' + result.error, 'error');
+      btn.disabled = false;
+      btn.innerHTML = '<span class="material-symbols-outlined">search</span> Scout Creators';
     }
-  } catch (err) { setStatus('Network error: ' + err.message, 'error'); }
-  btn.disabled = false;
-  btn.innerHTML = '<span class="material-symbols-outlined">search</span> Scout Creators';
+  } catch (err) {
+    setStatus('Network error: ' + err.message, 'error');
+    btn.disabled = false;
+    btn.innerHTML = '<span class="material-symbols-outlined">search</span> Scout Creators';
+  }
 }
 
 loadExisting();
