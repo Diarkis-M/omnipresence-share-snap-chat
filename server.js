@@ -68,7 +68,7 @@ function logScout(msg) {
 
 function runPipeline(platform) {
   const dir = platform === 'sharechat' ? SHARECHAT_DIR : SNAPCHAT_DIR;
-  const skipFlags = platform === 'snapchat' ? '--skip-api --skip-google' : '--skip-google';
+  const skipFlags = platform === 'snapchat' ? '--skip-api' : '';
   const cmd = `node scripts/run-pipeline.js --fresh ${skipFlags}`;
 
   logScout(`[${platform}] Starting: ${cmd}`);
