@@ -1,16 +1,21 @@
 {
-  "_comment": "Search queries with lifecycle tracking. LLM-generated queries are auto-pruned after 3 consecutive zero-yield runs.",
+  "_comment": "Search queries with lifecycle tracking. Broad men's grooming coverage.",
   "queries": [
-    { "query": "site:sharechat.com/profile beard grooming India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "site:sharechat.com/profile mens grooming India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "site:sharechat.com/profile skincare men India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "site:sharechat.com/profile hairstyle barber India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "site:sharechat.com/profile perfume fragrance India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "\"sharechat\" \"men's grooming\" India influencer", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "\"sharechat\" \"beard care\" India creator", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "\"sharechat\" grooming tips Hindi", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "\"moj\" \"mens grooming\" India creator", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
-    { "query": "site:mojapp.in grooming beard India", "source": "manual", "status": "proven", "addedAt": "2026-05-24", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } }
+    { "query": "site:sharechat.com/profile mens grooming India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile face wash skincare men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile body wash shower gel men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile beard grooming care India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile hairstyle hair men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile perfume deodorant fragrance men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile lookmaxxing looksmax glow up men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile men fashion style tips India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "site:sharechat.com/profile barber haircut salon men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" men grooming skincare routine India creator", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" face wash body wash review India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" men lifestyle glow up transformation India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" dadhi tel beard oil Hindi", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" men sunscreen moisturizer India review", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } },
+    { "query": "\"sharechat\" men hair serum oil treatment India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "stats": { "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 } }
   ],
   "_archive": []
 }

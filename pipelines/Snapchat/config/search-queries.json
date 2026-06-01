@@ -1,106 +1,21 @@
 {
-  "_comment": "Google CSE search queries with lifecycle metadata. Status: proven (hand-tuned, always run), experimental (LLM-generated, auto-pruned after 3 consecutive zeros), stale (flagged, not run). Queries are pruned/archived automatically by the pipeline.",
+  "_comment": "Search queries with lifecycle tracking. Broad men's grooming coverage.",
   "queries": [
-    {
-      "q": "site:snapchat.com/add beard grooming India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "site:snapchat.com/add mens grooming India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "site:snapchat.com/add skincare men India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "site:snapchat.com/add hairstyle barber India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "site:snapchat.com/add perfume fragrance India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "\"snapchat\" \"men's grooming\" India influencer",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "\"snapchat\" \"beard care\" India creator",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "\"add me on snapchat\" grooming India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "\"snapchat\" \"skincare routine\" men India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    },
-    {
-      "q": "\"snapchat\" \"hair tutorial\" men India",
-      "source": "manual",
-      "status": "proven",
-      "addedAt": "2026-05-24",
-      "timesRun": 0,
-      "totalHandlesFound": 0,
-      "lastYieldedAt": null,
-      "consecutiveZeros": 0
-    }
+    { "q": "site:snapchat.com/add mens grooming India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add face wash skincare men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add body wash shower gel men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add beard grooming care India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add hairstyle hair men barber India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add perfume deodorant fragrance men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add lookmaxxing glow up men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "site:snapchat.com/add men fashion style tips India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" men grooming skincare routine India creator", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" face wash body wash review India influencer", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" men lifestyle glow up transformation India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" men sunscreen moisturizer India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"add me on snapchat\" grooming skincare men India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" men hair serum oil treatment India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 },
+    { "q": "\"snapchat\" men acne pimple dark spots India", "source": "manual", "status": "proven", "addedAt": "2026-06-01", "timesRun": 0, "totalHandlesFound": 0, "lastYieldedAt": null, "consecutiveZeros": 0 }
   ],
   "_archive": []
 }
